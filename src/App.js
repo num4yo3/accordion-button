@@ -1,21 +1,16 @@
+import React, { useState } from "react";
+import { Menu } from "./components/Menu";
 import "./styles.css";
 
 export const App = () => {
-  return (
-    <ul className="menu">
-      <div className="menu_title">menu</div>
-      <a href="#">
-        <li class="menu_item">first</li>
-      </a>
-      <a href="#">
-        <li class="menu_item">second</li>
-      </a>
-      <a href="#">
-        <li class="menu_item">third</li>
-      </a>
-      <a href="#">
-        <li class="menu_item">fourth</li>
-      </a>
-    </ul>
-  );
+  const [active, setActive] = useState(false);
+  const [activeClass, setActiveClass] = useState("menu_item");
+
+  const onClickMenu = () => {
+    active || setActiveClass("menu_item_active");
+    active && setActiveClass("menu_item");
+    setActive(!active);
+  };
+
+  return <Menu activeClass={activeClass} onClick={onClickMenu} />;
 };

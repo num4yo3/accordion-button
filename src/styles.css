@@ -15,8 +15,17 @@
 }
 a {
   text-decoration: none;
+  color: black;
 }
 .menu_item {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  visibility: hidden;
+  color: black;
+  outline: solid 1px gray;
+}
+.menu_item_active {
   width: 100%;
   height: auto;
   text-align: center;
@@ -24,7 +33,6 @@ a {
   color: black;
   outline: solid 1px gray;
 }
-
-.menu_item:hover {
+.menu_item_active:hover {
   background-color: silver;
 }
