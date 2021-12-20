@@ -4,11 +4,11 @@ import "./styles.css";
 
 export const App = () => {
   const [active, setActive] = useState(false);
-  const [activeClass, setActiveClass] = useState("menu_item");
+  const [activeClass, setActiveClass] = useState("menu_inactive");
 
   const onClickMenu = () => {
-    active || setActiveClass("menu_item_active");
-    active && setActiveClass("menu_item");
+    active || setActiveClass("menu_active");
+    active && setActiveClass("menu_inactive");
     setActive(!active);
   };
 
