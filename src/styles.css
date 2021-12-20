@@ -13,10 +13,18 @@
   background-color: rgb(255, 157, 157);
   outline: solid 1px red;
 }
-
+a {
+  text-decoration: none;
+}
 .menu_item {
   width: 100%;
   height: auto;
   text-align: center;
+  font-weight: bold;
+  color: black;
   outline: solid 1px gray;
+}
+
+.menu_item:hover {
+  background-color: silver;
 }
